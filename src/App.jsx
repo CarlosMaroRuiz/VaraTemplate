@@ -2,6 +2,7 @@ import React from 'react';
 import { ApiProvider } from "@gear-js/react-hooks";
 import VaraApp from './vara/varaApp';
 import { initialArgs } from './vara/shared/utils/varaUtil';
+import { WalletProvider } from './wallet/context/WalletContext';
 
 function App() {
    /*Se tiene pensado añadir context de 
@@ -13,7 +14,9 @@ function App() {
   return (
     
     <ApiProvider initialArgs={initialArgs}>
+      <WalletProvider>
       <VaraApp/> 
+      </WalletProvider>
     </ApiProvider>
   );
 }

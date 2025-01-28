@@ -8,10 +8,13 @@ function VaraApp() {
   return (
     <>
       {isApiReady ? (
-        <IntroductionPage />
+  
+           <IntroductionPage />
+  
+    
       ) : (
         <div className="h-screen flex items-center justify-center">
-          <p className="text-lg">Connecting to Vara Network...</p>
+          <p className="text-lg text-blue-500">Connecting to Vara Network...</p>
         </div>
       )}
     </>
